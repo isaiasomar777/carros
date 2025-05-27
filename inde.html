@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5">
+</head>
+<body id="body">
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <img src="/images (17).jpeg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                OBJETOS
+            </a>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-5">
+        <div class="shadow border mt-3 text-center p-5 bg-white">
+            <h1>CRUD VEHICULOS</h1>
+            <button class="btn btn-success float-end mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-car-front"></i> Agregar Vehiculo</button>
+
+            <!-- Table to Display Vehicles (moved inside the box) -->
+            <table class="table table-bordered table-striped mt-5">
+                <thead>
+                    <tr class="table-dark">
+                        <th>MARCA</th>
+                        <th>MODELO</th>
+                        <th>AÑO</th>
+                        <th>PLACA</th>
+                        <th>COSTO</th>
+                        <th>ACCION</th>
+                    </tr>
+                </thead>
+                <tbody id="vehicleTable">
+                    <!-- Table rows will be added dynamically via JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Modal for Adding Vehicle -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">AGREGAR VEHICULO</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="marca" class="form-label">MARCA</label>
+                            <input type="text" id="marca" placeholder="MARCA" class="form-control my-2 w-50 m-auto">
+                        </div>
+                        <div class="mb-3">
+                            <label for="modelo" class="form-label">MODELO</label>
+                            <input type="text" id="modelo" placeholder="MODELO" class="form-control my-2 w-50 m-auto">
+                        </div>
+                        <div class="mb-3">
+                            <label for="anio" class="form-label">AÑO</label>
+                            <input type="text" id="anio" placeholder="AÑO" class="form-control my-2 w-50 m-auto">
+                        </div>
+                        <div class="mb-3">
+                            <label for="placa" class="form-label">PLACA</label>
+                            <input type="text" id="placa" placeholder="PLACA" class="form-control my-2 w-50 m-auto">
+                        </div>
+                        <div class="mb-3">
+                            <label for="costo" class="form-label">COSTO</label>
+                            <input type="text" id="costo" placeholder="COSTO" class="form-control my-2 w-50 m-auto">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary" id="saveButton">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/bootstrap.min.js"></script>
+    <script src="/bootstrap.js"></script>
+    <script src="/alertas/app.js"></script>
+</body>
+</html>
